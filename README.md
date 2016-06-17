@@ -1,10 +1,10 @@
 # docker-nginx-php
-Dockerfile based on Alpine Linux to run PHP and Nginx together
+This is a dockerfile based on Alpine Linux to run PHP and Nginx together.
 ##Run It
 To create a basic server, with nginx configs mounted at /config on the host, with the root directory mounted at /webroot on the host, use:
 
 ```
-docker run --rm -p 80:80 -v /webroot:/var/www -v /config:/etc/nginx/conf.d adamant/nginx-php
+docker run -d -p 80:80 -v /webroot:/var/www -v /config:/etc/nginx/conf.d adamant/nginx-php
 ```
 
 ##Custom Configs
